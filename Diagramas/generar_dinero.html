@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Dinero - Diagrama</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #0f172a;
+            color: #fff;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            align-self: flex-start;
+            transition: background 0.3s;
+        }
+
+        .btn-back:hover {
+            background: #1d4ed8;
+        }
+
+        .diagram-container {
+            width: 100%;
+            max-width: 1200px;
+            height: 80vh;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="../index.html" class="btn-back">← Volver al Menú Principal</a>
+
+    <div class="diagram-container">
+        <iframe src="https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=#R%3Cmxfile%3E%3Cdiagram%20id%3D%22DpKgMt7WtUq3MFGANAF3%22%20name%3D%22Page-1%22%3E7VxRc6M2EP41nmkfLoMQ2M6j4zjXzDRper6b9h4xKLY6gKiAxOmvrwQIg5AdsDHGHj9cDglkxO737a5WCwM49dZfqRWsnoiD3IGuOesBvB%2FoOtC0W%2FYf7%2FlIe8amkXYsKXayizYdc%2FwfEiOz3hg7KCxdGBHiRjgod9rE95EdlfosSsl7%2BbJX4pbvGlhLVOmY25Zb7f0LO9FKPIW26f8N4eVK3Jk9cXrGs8TFWUe4shzyXuiCswGcUkKi9MhbT5HLhSfkko572HI2nxhFflRngJ4OeLPcOHu2x%2BfH6eMf2eyiD%2FHIbBiTLmvcva9whOaBZfMz70zBrG8VeS5rAXaY%2FSCiEVpvnRTIH5VhBBEPRfSDXZIN0IeZdDJ4GFnzfSNrIAS4Ksh5nPVZmXqX%2BS9vJMAOMiGoBQIrAhnow4EOGfT4s2lTF7OnQHyEv6QotPj92D%2BX%2FwlcK7JeCfWs0qDCoSRVpv6AHzLZWK6LXLKklscuDBDFbOqIyudeNic%2BU8QrXiPBnbYUY5YVA1SaMY6kGWOXZubIRbaNaW9Rds2La%2FncvHA1zePQpjiw8WAKB3fQr6kZSmLfQfzW2kkwn4v6M9APWxCtuRP0U31w9%2FBnzOU3ueWmFgdESNfO6cDt8UNd4a6It4jDkwgW1rUmeechkh1WJDvzgsxsTFfY5obCZTe8WzDcDpf8aBLiZQnGd4nkQYhtLvZfBroBzC%2FsL2Tz037M7%2FkcUPjrySFs6JKkRx1CeLRD0CwK8TlaP5X0jEGZBhSHSAha01JJ90zUeUAhRD2sKepRC6K%2BVVgLOVrwnQmPs1jLJz4qPz97RvrxN5fVjSmaP4vn7teZINPWh2itcVQYxlo%2FC2c2g3hDjElnhpxKPCdJms2exNRGpSAgsugSRYVAqaqPgrxNhbhFH0UsMsBv5UmodJDd4YVgNr1c3RBI6oaSGtPJZ6OK4Z78Q7KXkR1z%2BsiVH0ogkT92LZSIKXcOk%2FoqL%2BoXnlS%2F%2Bhbn32f9gos3A2YVJsbVDDSESXWF2RAmmbpBUdm56tXq3kCrCKwCzg42HUWYjKowMa8waQgT1bp7P2vSTOX7wKs1azK8wqQhTHYmAV4osVnEnwT01pIvlmzCw%2FrvFv0HRXwlwO%2Bta%2FOI4gBdaIpGzp0JZXSxCAPVVdjhxh7UNPU3YDQqcv%2BLdqNp8DP681ZBY%2B26AXANF5oSfHwUP1A3pix5gSP4AGG%2Frk7gEIyoEhBSujKz%2F5OAkoXlkJ6mJsdlmZmKhNlYofs2sunCBVzw8k3gpL8WeQhaYpspe%2B%2F22Kar1vk5f55IGNEk4poxpNBkRrr2DbH7MtXwE73cbTGk%2FKnZZZQkmNab5Wqc%2BjUqZzy2i7IgywzOkTGuLWdBMwd3ZVhVQrra1MVB2LmcnNhNHYlumMTemmXGd2GyRS8KeWlZ5%2FTnschNQuZG9z%2FqzCYGOv09RIp5iBZEGOlfiNSBedV%2B%2BWEwSLzCn3T2xY48pg5NtU%2BTzHC%2Fq5o5OTb5R3W3hVsjXVvKnx%2BQbVsnXry2hsyCfKscjrd%2FncYBoWrHF9cSHu0kZzL2Hk3IjJ605si0fkd5WHuk3ZkmoY1XtETCr6MjrOw4i5OUXaggolQjZq4Qa0Npi5O3xGCmSfmpGTsmCZpsq%2F8YoYd9szVb9PXWCha6RrksnCFurith36Vdk3FH2MQVYSpwbXznXlHP6bs75EfbjhHY%2FQp7KfuZl5W5POScHnrddVi%2FD9moHuqg0OzFX9C2a6jNVdqZJ0oDxGdkoxEmSZBKikNA0WuTt39GSE%2BfhKwoj1t%2FTWLHstIAGVaHikTaD4OXnTaAib5Ka4KvXakLFnYmTp3TF5sQuGcAJu4y5MWQn20BZKU7GwfPwYgCoSHg0N6bKn1SD8CnxcLh5mUkLkl23R%2F7mgoccbJ3bi04grxTvRMgH15f039IpklSwV0kqANqydEA7oqk7OH3Sf6goatZgv9InZwEVkdbb4hUtXgyBuJmeI%2FqGbUx6apvlN%2FiAVvdlyTZss9HeGyX75U6OXwOuikJTEV8J14hw%2Bi7CvdCkEDsLlxY0qQSMI%2BKlL9JG6Yu0yQ7CN%2BSTt%2FOLmaDWJS8Pzq%2F03hEKPJUc4ahfvJQX%2BnvzEsg1vi3yspcmpeXh8rqLlhB8TAfC2Jnda%2BWjF5WdWDJVP03vFHaM1nwaP6NNUqZXDw5%2B%2BvPog9jtKJvakoU813SN%2F8aM2TCqpPPk7Cy3C5OAymwN39Y8NFJUvPm2MXE1Z7b1pIgNFlws99gYKa24%2BG5Zevvn4Gpz9Dw%3D%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E"></iframe>
+    </div>
+
+</body>
+</html>

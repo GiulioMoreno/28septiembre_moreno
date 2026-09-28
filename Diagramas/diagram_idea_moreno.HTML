@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Diagrama</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 12px 24px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #6366f1, #a855f7);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+            align-self: flex-start;
+        }
+
+        .btn-back:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(99, 102, 241, 0.5);
+        }
+
+        .iframe-container {
+            width: 100%;
+            max-width: 1200px;
+            height: 75vh;
+            background: #1e293b;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="../index.html" class="btn-back">← Volver al Menú Principal</a>
+
+    <div class="iframe-container">
+        <iframe frameborder="0" style="width:100%;height:1783px;" src="https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=#R%3Cmxfile%3E%3Cdiagram%20id%3D%22yfWiQOQ-eddfnwOeQ-q3%22%20name%3D%22Page-1%22%3E7VzbcuI4EP0aqmZetnzl8giGZKnaSVJkZ2fnUbEVoy3ZYmU5IfP1K8my8UVhCRjHpPICUssX%2BZyjVnebZGB70faags36GwkgHlhGsB3Y84FluZMh%2FxSGF2Uw3MwQUhRkJnNnuEe%2FoDIaypqiACaVAxkhmKFN1eiTOIY%2Bq9gApeS5etgjwdW7bkAIG4Z7H%2BCm9QcK2Dqzjl1jZ%2F8donCd39k01EgE8oOVIVmDgDyXTPZiYHuUEJa1oq0HscAuxyU77%2BqV0WJiFMbskBOs7IQngFP1bMubpbe8VbNjL%2FkjU5LGARRnmQN79rxGDN5vgC9GnznH3LZmEVbD6qKQMrh9dWJm8bhcJpBEkNEXfog6oeBaScRW3ecd3uZE2dYlrIfKBhTFYXHlHQq8oYDQg%2BI0QFmI4TRJAUVEHBiHFCZAKoxSSOQ0pdwYBQkcePZgZvLhIYgEMvFDsilQKWHKyd%2BIJkcFYAwxCSmI%2BIEbSBGfNKT1sbvdwP9R8Ii2MF85bVFiWb%2B5FVJMU8PK0D0PK26DlYFnDWZXXsrnL7iAW5Qw3uajV039rkn0kCbdaNetarcQahkmUyPewk%2BcgtOwgZNHIaDiCSB9RNIRQ%2F6BJWbRJlPyq8vd6AQyp7bcLZ2yrDOt91EDsXuIoe8jEkvcEr6HENH44mEUI5%2FDxa9peCROGE3FmLJcoygGiXARogeZ%2F%2FXi17xZXfG2jpexhpdxC7yMmyteqFvMwZ55gIaSHcxXPchFTeG%2FKUoQI4nkLZSueBoLNnCJyeIqleY7rwHLqWLtWB2ugYkOa8xvMHsQeIWi9b3YAJP0AcrAifHe1d38SuIvXQvx04g%2FMLl45efyy2NUnfJdp8nGqAU28nvppb9IfBDLqOPWW12ImIddOnTTbMC3w4xHafxzyeMEjEIY%2B0g4jyll6BHxNu4fcrro4WzINROCsqpkwDXfLXEDwxA9YKgC4CfhbqcmRgGRMdhhyuwyMnNGtRB2NNbFZpoQtoD8JHjtffB%2BIzyekHsa5Ekqd3tT3iyjHRO5xXEFE19gfBjAF%2BZ47UmVoXGnnqOZ%2B5VjDhIJoARDAchiDLjllEnZzwNpyJLAPL6OCY1Atk4ALjbJfochdhX%2FiS71djT4t7LxabK8ff7nSbhwlvsfn%2FODIeut82nkz4Y2xNN5H7sNcJupYdn7AOpnzofH00G2U0bia7laLa6%2F%2FzHloYYh7mUZd4ub%2BXJx8%2BeipxJ2rDrOrtuhD2nmk4fAPL1b3c6m89sC5cWNiPBWc%2FHdS5jrkYqpLXScDeZmejj1WQow%2BiXxvYdRFo48EkoGKj9cIZiEovflL0ilJcN6GvHMBmNSGFbkH9LM3t8dYatLhK29WUjmjBey6CbCkhxZiWoCeGAtk29bRNtS5hikScq3xn46Z7seGZr2SIO1fS7nbDVzlnLKFz8hqWqA%2BVOKiALFEQwQkO0vN0SmL6CMeaZjLy9QZ90fa8CS6WbzdZAnQlhGLRuQqG9alLVDdGiIcmkR5rjJ9aTYm8tsjzRsj90WyN6bZu3ygA2IGUetKG95KQ9wUIRU9CNDSlk0dj8mU5bdCJlcRxeOanhqIxy19uZrd1RCJJkSWRkVSQFFciGBlBG1%2FzDkZ2uLwic1iCUw3EXmVPZzf69lAuZQi%2F2Zqr%2Ba13BXy5s9oHT0YrK%2BJY%2FcLrdkXX5UQwTGwVS85Oa9mMSwigDcIva3UBBfV1nvp9KTaM%2B35c6L6mR3gEHjpXgNMz4LklIfVvljgIaQlddTE9sSdK4GudxGIQYMPVWnoYNT3eGOID7BHXW5Syioq79vy%2BavTtux0riSbdWuNHRrV8qeunElyW%2Fx4IdRrsva3kR5zO9V4lx0f5bHdqzL3ktJAx1JxdZIxfqUypuloss8P5hULI1UjMGnVN4qFd3L1eOkUhZKSTevSOVw2isUv7Ipd0OxXafYsd2WKLYn56NY9073g3kDoymVrC7UG2%2FgOG15gzNKJS9gXEBY2TN6zXpUfzC9Rr20dz5nb%2BtqS114giMpHmlWtftBaK%2Bv6uKHgGeg3WqN9rft8bk3MMu%2BoPAMrXoDVyOV4adU3iwVXaGrpxtArzzBuF7qOtr%2FG%2FW0oUV2db9qODe7He8ZmmqT2asSwvFKqfmBcf11U4tCObm82P8dQ1NAMHtVlrwIoXz8oqRWKO9ahrhIoZxckuz%2F1qOpV5nvWpK0jSq%2Fw%2BODlNqF6i9VWxTKyQXJ%2FgtFU62a9MmhDOt%2B4FiH4tYF155OnJNrGb3Xybgpk1GfZFL8YdKpMrHP504c61SZ9D5A0VTJepUaX4RMTq579D7h0VTIelUguwiZfPwCikYmTp9kYtZfjxxdRj1fnc15j19ndSsT3Y%2B6PmWyVya8u%2FuHLtnhu%2F%2BKYy%2F%2BAw%3D%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E"></iframe>
+
+        <iframe frameborder="0" style="width:100%;height:100%;" src="https://viewer.diagrams.net/?highlight=0000ff&edit=_blank&layers=1&nav=1#R..."></iframe>
+    </div>
+
+</body>
+</html>
